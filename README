@@ -1,2 +1,15 @@
 OK this is a quick and dirty partial port of Mikeal Rogers request node module
 https://github.com/mikeal/request
+
+The aim is to build a browser side framework implementation of his library. 
+
+At present this type of simple request is supported:
+
+request({
+			url : serverDb + testDb,
+			method : 'put',
+			body : '{"name":"Tom"}',
+			json : true
+		}, function(error, response, body) {
+			// Your callback code here
+		});
