@@ -1,11 +1,5 @@
 
 
-/*
- * Dependency JSON so I include json2.js from Douglas Crockford
- * Could of used condtional script loading etc. like yep nope but went for the simple option.
- *
- * Just delete the JSON line if you are only targetting modern browsers
- */
 
 var request = function(obj, callback) {
 	var body;
