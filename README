@@ -1,7 +1,9 @@
 OK this is a quick and dirty partial port of Mikeal Rogers request node module
 https://github.com/mikeal/request
 
-The aim is to build a browser side framework implementation of his library. 
+The aim is to build a browser side framework independent implementation of his library. 
+
+You'll need to include json2.js included in the lib directory to support older browsers.
 
 I haven't tested IE yet so please don't use in production yet.
 

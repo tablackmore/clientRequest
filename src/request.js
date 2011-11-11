@@ -1,6 +1,3 @@
-
-
-
 var request = function(obj, callback) {
 	var body;
 	if(!window.XMLHttpRequest) {
