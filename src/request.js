@@ -1,27 +1,4 @@
-/*	{
- url:"http://hi.com",//required
- headers:"{}",//optional default "{}"
- method:"GET",// optional default "GET"
- body:{ name:"tom"}
- json:true
 
- }
- uri || url - fully qualified uri or a parsed url object from url.parse()
- method - http method, defaults to GET
- headers - http headers, defaults to {}
- body - entity body for POST and PUT requests. Must be buffer or string.
- json - sets body but to JSON representation of value and adds Content-type: application/json header.
- multipart - (experimental) array of objects which contains their own headers and body attribute. Sends multipart/related request. See example below.
- followRedirect - follow HTTP 3xx responses as redirects. defaults to true.
- maxRedirects - the maximum number of redirects to follow, defaults to 10.
- onResponse - If true the callback will be fired on the "response" event instead of "end". If a function it will be called on "response" and not effect the regular semantics of the main callback on "end".
- encoding - Encoding to be used on response.setEncoding when buffering the response data.
- pool - A hash object containing the agents for these requests. If omitted this request will use the global pool which is set to node's default maxSockets.
- pool.maxSockets - Integer containing the maximum amount of sockets in the pool.
- timeout - Integer containing the number of milliseconds to wait for a request to respond before aborting the request
- proxy - An HTTP proxy to be used. Support proxy Auth with Basic Auth the same way it's supported with the url parameter by embedding the auth info in the uri.
- strictSSL - Set to true to require that SSL certificates be valid. Note: to use your own certificate authority, you need to specify an agent that was created with that ca as an option.
- */
 
 /*
  * Dependency JSON so I include json2.js from Douglas Crockford
