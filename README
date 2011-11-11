@@ -1,7 +1,7 @@
 OK this is a quick and dirty partial port of Mikeal Rogers request node module
 https://github.com/mikeal/request
 
-The aim is to build a browser side framework independent implementation of his library. 
+The aim is to build a browser side, framework independent, partial implementation of his library so that I can create isomorphic http apis. Such as a js couchdb api that will work seemlessly on both node.js and in the browser.
 
 You'll need to include json2.js included in the lib directory to support older browsers.
 
@@ -10,10 +10,10 @@ I haven't tested IE yet so please don't use in production yet.
 At present this type of simple request is supported:
 
 request({
-			url : serverDb + testDb,
-			method : 'put',
-			body : '{"name":"Tom"}',
-			json : true
-		}, function(error, response, body) {
+	url : serverDb + testDb,
+	method : 'put',
+	body : '{"name":"Tom"}',
+	json : true
+}, function(error, response, body) {
 			// Your callback code here
-		});
+});
