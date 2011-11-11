@@ -10,7 +10,7 @@ I haven't tested IE yet so please don't use in production yet.
 At present this type of simple request is supported:
 
 request({
-	url : serverDb + testDb,
+	url : "http://localhost/someService",
 	method : 'put',
 	body : '{"name":"Tom"}',
 	json : true
