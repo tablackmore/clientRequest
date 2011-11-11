@@ -3,6 +3,8 @@ https://github.com/mikeal/request
 
 The aim is to build a browser side framework implementation of his library. 
 
+I haven't tested IE yet so please don't use in production yet.
+
 At present this type of simple request is supported:
 
 request({
