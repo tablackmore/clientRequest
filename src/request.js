@@ -10,7 +10,7 @@ var request = function(obj, callback) {
 		}
 	}
 	// Tidy up the input
-	if( typeof obj === "object") {
+	if( typeof obj === 'object') {
 		if(obj.body) {
 			if(obj.body.length) {
 				obj.headers['content-length'] = self.body.length;
@@ -21,15 +21,15 @@ var request = function(obj, callback) {
 		if(obj.url) {
 			obj.uri = obj.url;
 		}
-		if(obj.method && typeof obj.method === "string" && obj.method.length > 0) {
+		if(obj.method && typeof obj.method === 'string' && obj.method.length > 0) {
 			obj.method = obj.method.toUpperCase();
 		} else {
-			obj.method = "GET";
+			obj.method = 'GET';
 		}
-		if(obj.body && typeof obj.body === "object") {
+		if(obj.body && typeof obj.body === 'object') {
 			obj.body = JSON.stringify(obj.body);
 		}
-		if( typeof obj.body === "undefined") {
+		if( typeof obj.body === 'undefined') {
 			obj.body = null;
 		}
 	}
@@ -37,14 +37,14 @@ var request = function(obj, callback) {
 	var xhReq = new XMLHttpRequest();
 	xhReq.open(obj.method, obj.uri, true);
 
-	if(obj.headers && typeof obj.headers === "object") {
+	if(obj.headers && typeof obj.headers === 'object') {
 		for(var header in obj.headers) {
 			xhReq.setRequestHeader(header, obj.headers[header]);
 		}
 	}
 
-	if(obj.json && obj.method === "POST" || obj.method === "PUT") {
-		xhReq.setRequestHeader("Content-type", "application/json");
+	if(obj.json && obj.method === 'POST' || obj.method === 'PUT') {
+		xhReq.setRequestHeader('Content-type', 'application/json');
 	}
 
 	xhReq.onreadystatechange = function() {
