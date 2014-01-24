@@ -13,9 +13,9 @@ var request = function(obj, callback) {
 	if( typeof obj === "object") {
 		if(obj.body) {
 			if(obj.body.length) {
-				obj.headers['content-length'] = self.body.length
+				obj.headers['content-length'] = self.body.length;
 			} else {
-				throw new Error('Argument error, options.body.')
+				throw new Error('Argument error, options.body.');
 			}
 		}
 		if(obj.url) {
