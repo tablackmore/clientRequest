@@ -1,5 +1,7 @@
 var request = function(obj, callback) {
-	var body;
+	var body,
+	    xhReq = new XMLHttpRequest();
+	
 	if(!window.XMLHttpRequest) {
 		window.XMLHttpRequest = function() {
 			try {
@@ -9,6 +11,7 @@ var request = function(obj, callback) {
 			}
 		}
 	}
+	
 	// Tidy up the input
 	if( typeof obj === 'object') {
 		if(obj.body) {
@@ -34,7 +37,6 @@ var request = function(obj, callback) {
 		}
 	}
 
-	var xhReq = new XMLHttpRequest();
 	xhReq.open(obj.method, obj.uri, true);
 
 	if(obj.headers && typeof obj.headers === 'object') {
@@ -61,5 +63,6 @@ var request = function(obj, callback) {
 
 		}
 	};
+	
 	xhReq.send(obj.body);
 };
