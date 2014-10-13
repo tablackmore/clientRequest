@@ -1,4 +1,5 @@
 var request = function(obj, callback) {
+	
 	var body,
 	    xhReq = new XMLHttpRequest();
 	
